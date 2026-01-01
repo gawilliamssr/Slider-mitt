@@ -783,6 +783,95 @@ a {
     transform: rotate(45deg);
 }
 
+.roadmap {
+    padding: 110px 0 90px;
+    position: relative;
+}
+
+.roadmap::after {
+    content: "";
+    position: absolute;
+    inset: 60px 0 30px;
+    background: radial-gradient(800px 600px at 15% 20%, rgba(247, 210, 0, 0.08), transparent),
+        radial-gradient(640px 520px at 80% 10%, rgba(255, 77, 31, 0.08), transparent);
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 32px;
+}
+
+.roadmap-card {
+    background: rgba(21, 24, 29, 0.8);
+    border: 1px solid rgba(244, 239, 230, 0.12);
+    border-radius: 18px;
+    padding: 24px;
+    min-height: 100%;
+    display: grid;
+    gap: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.roadmap-card h3 {
+    font-size: 1.05rem;
+    letter-spacing: 0.06em;
+}
+
+.roadmap-card p {
+    color: rgba(244, 239, 230, 0.72);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.roadmap-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(247, 210, 0, 0.12);
+    color: var(--accent);
+    border: 1px solid rgba(247, 210, 0, 0.4);
+    padding: 6px 12px;
+    border-radius: 999px;
+    letter-spacing: 0.16em;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+.roadmap-chip-orange {
+    background: rgba(255, 77, 31, 0.12);
+    color: var(--accent2);
+    border-color: rgba(255, 77, 31, 0.4);
+}
+
+.roadmap-chip-teal {
+    background: rgba(71, 182, 169, 0.14);
+    color: #47b6a9;
+    border-color: rgba(71, 182, 169, 0.5);
+}
+
+.roadmap-footer {
+    margin-top: 26px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.roadmap .cta-secondary {
+    border-bottom: 1px solid rgba(247, 210, 0, 0.4);
+    padding-bottom: 4px;
+}
+
 .final-cta {
     padding: 100px 0 120px;
 }
@@ -864,6 +953,10 @@ a {
         grid-template-columns: 1fr;
     }
 
+    .roadmap-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .vs-divider {
         justify-self: center;
         padding: 12px 0;
@@ -913,5 +1006,14 @@ a {
 
     .badges {
         flex-direction: column;
+    }
+
+    .roadmap-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .roadmap-footer {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }

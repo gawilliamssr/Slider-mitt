@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     const animateElements = document.querySelectorAll(
-        '.feature, .benefit, .comparison-column, .badge, .testimonial, .exploded-view, .press-strip'
+        '.feature, .benefit, .comparison-column, .badge, .testimonial, .exploded-view, .press-strip, .roadmap-card, .roadmap-footer'
     );
 
     animateElements.forEach((element) => {
